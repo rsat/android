@@ -18,7 +18,7 @@ class MapLocationSource internal constructor(
         cachedOnLocationChangedListener = onLocationChangedListener
         callbackWrapper = object : LocationCallback {
             override fun onLocationResult(locationResult: LocationResult) {
-                Timber.tag("873432").d("MapLocationSource recevied locationResult $locationResult")
+                Timber.tag("873432").d("MapLocationSource received locationResult $locationResult")
                 lastKnownLocation = locationResult.lastLocation
                 onLocationChangedListener.onLocationChanged(locationResult.lastLocation)
                 locationUpdateCallback.onLocationResult(locationResult)
