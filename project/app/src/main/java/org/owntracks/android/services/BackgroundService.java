@@ -168,12 +168,12 @@ public class BackgroundService extends LifecycleService implements OnModeChanged
         locationCallback = new LocationCallback() {
             @Override
             public void onLocationAvailability(@NotNull LocationAvailability locationAvailability) {
-                Timber.tag("873432").d("BackgroundService location availability %s", locationAvailability);
+                Timber.d("BackgroundService location availability %s", locationAvailability);
             }
 
             @Override
             public void onLocationResult(@NotNull LocationResult locationResult) {
-                Timber.tag("873432").d("BackgroundService Location result received: %s", locationResult);
+                Timber.d("BackgroundService Location result received: %s", locationResult);
                 onLocationChanged(locationResult.getLastLocation(), MessageLocation.REPORT_TYPE_DEFAULT);
             }
         };
@@ -186,7 +186,7 @@ public class BackgroundService extends LifecycleService implements OnModeChanged
 
             @Override
             public void onLocationResult(@NotNull LocationResult locationResult) {
-                Timber.tag("873432").d("BackgroundService Ondemand Locationresult received: %s", locationResult);
+                Timber.d("BackgroundService Ondemand Locationresult received: %s", locationResult);
                 onLocationChanged(locationResult.getLastLocation(), MessageLocation.REPORT_TYPE_RESPONSE);
             }
         };

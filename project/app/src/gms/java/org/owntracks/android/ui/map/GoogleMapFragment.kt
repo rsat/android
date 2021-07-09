@@ -87,7 +87,7 @@ class GoogleMapFragment internal constructor() : MapFragment(), OnMapReadyCallba
             }
 
             if (locationSource == null) {
-                Timber.tag("873432").e("No location source set")
+                Timber.e("No location source set")
             } else {
                 setLocationSource(locationSource!!.toGMSLocationSource())
             }
@@ -95,10 +95,11 @@ class GoogleMapFragment internal constructor() : MapFragment(), OnMapReadyCallba
             setMapStyle()
 
             val zoomLocation =
-                locationRepo?.currentPublishedLocation?.value?.run { LatLng(latitude, longitude) } ?: LatLng(
-                    MapActivity.STARTING_LATITUDE,
-                    MapActivity.STARTING_LONGITUDE
-                )
+                locationRepo?.currentPublishedLocation?.value?.run { LatLng(latitude, longitude) }
+                    ?: LatLng(
+                        MapActivity.STARTING_LATITUDE,
+                        MapActivity.STARTING_LONGITUDE
+                    )
 
             moveCamera(
                 CameraUpdateFactory.newLatLngZoom(zoomLocation, ZOOM_LEVEL_STREET)
