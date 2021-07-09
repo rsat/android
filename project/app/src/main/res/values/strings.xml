@@ -21,6 +21,7 @@
     <string name="preferencesAdvanced">Advanced</string>
     <string name="preferencesChangelog">Changelog</string>
     <string name="preferencesTheme">Theme</string>
+
     <string name="version">Version</string>
     <string name="preferencesReporting">Reporting</string>
     <string name="preferencesTrackerId">Tracker ID</string>
@@ -210,6 +211,8 @@
     <string name="preferenceKeyNotificationGeocoderErrors">notificationGeocoderErrors</string>
     <string name="preferencesNotificationGeocoderErrors">Geocoder errors</string>
     <string name="preferencesNotificationGeocoderErrorsSummary">Display geocoder errors, rate limits &amp; quota exceeded events </string>
+    <string name="dozeWhitelistedYes">Yes</string>
+    <string name="dozeWhitelistedNo">No</string>
     <string-array name="geocoders">
         <item>None</item>
         <item>Device (Google)</item>
