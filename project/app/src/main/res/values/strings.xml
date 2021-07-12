@@ -212,6 +212,8 @@
     <string name="preferencesNotificationGeocoderErrorsSummary">Display geocoder errors, rate limits &amp; quota exceeded events </string>
     <string name="dozeWhitelistedYes">Yes</string>
     <string name="dozeWhitelistedNo">No</string>
+    <string name="deleteRegionConfirmation">Do you want to Delete</string>
+    <string name="deleteRegionTitle">Delete</string>
     <string-array name="geocoders">
         <item>None</item>
         <item>Device (Google)</item>
