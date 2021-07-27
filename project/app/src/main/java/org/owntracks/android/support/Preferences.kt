@@ -554,9 +554,6 @@ class Preferences @Inject constructor(
             }
         }
 
-    fun keepAliveInRange(i: Int): Boolean =
-        i >= TimeUnit.MILLISECONDS.toSeconds(Scheduler.MIN_PERIODIC_INTERVAL_MILLIS)
-
     val minimumKeepalive = TimeUnit.MILLISECONDS.toSeconds(Scheduler.MIN_PERIODIC_INTERVAL_MILLIS)
 
     val keepaliveWithHintSupport: String
@@ -1150,5 +1147,7 @@ class Preferences @Inject constructor(
             NIGHT_MODE_ENABLE
         )
         val SYSTEM_NIGHT_AUTO_MODE by lazy { if (SDK_INT > Build.VERSION_CODES.Q) MODE_NIGHT_FOLLOW_SYSTEM else MODE_NIGHT_AUTO_BATTERY }
+        fun keepAliveInRange(i: Int): Boolean =
+            i >= TimeUnit.MILLISECONDS.toSeconds(Scheduler.MIN_PERIODIC_INTERVAL_MILLIS)
     }
 }
