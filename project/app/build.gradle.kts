@@ -12,7 +12,7 @@ val versionMajor = 2
 val versionMinor = 4
 val versionPatch = 0
 
-val googleMapsAPIKey = extra.get("google_maps_api_key")?.toString() ?: "PLACEHOLDER_API_KEY"
+val googleMapsAPIKey = "AIzaSyBe5tMBzIOkyZ9pyYX9xre6FO3JtAn140w"
 
 jacoco {
     version = "0.8.7"
