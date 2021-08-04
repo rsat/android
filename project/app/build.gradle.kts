@@ -6,6 +6,8 @@ plugins {
     kotlin("kapt")
     id("io.objectbox")
     id("com.hiya.jacoco-android")
+    id("kotlin-android")
+    id("com.google.gms.google-services") version "4.3.8"
 }
 
 val versionMajor = 2
@@ -235,6 +237,11 @@ dependencies {
     implementation("com.jakewharton:process-phoenix:2.1.1")
     implementation("com.squareup.tape2:tape:2.0.0-beta1")
 
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:28.2.1"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     // These Java EE libs are no longer included in JDKs, so we include explicitly
     kapt("javax.xml.bind:jaxb-api:2.3.1")
     kapt("com.sun.xml.bind:jaxb-core:$jaxbVersion")
