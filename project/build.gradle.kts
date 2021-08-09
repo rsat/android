@@ -16,6 +16,7 @@ buildscript {
         //noinspection DifferentKotlinGradleVersion
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.10")
         classpath("com.google.dagger:hilt-android-gradle-plugin:${rootProject.extra["dagger-version"]}")
+        classpath("com.google.gms:google-services:4.3.8")
     }
 }
 

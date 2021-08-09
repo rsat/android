@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
     id("dagger.hilt.android.plugin")
     id("com.github.triplet.play") version "3.5.0"
     kotlin("android")
@@ -12,7 +13,7 @@ val versionMajor = 2
 val versionMinor = 4
 val versionPatch = 0
 
-val googleMapsAPIKey = "AIzaSyBe5tMBzIOkyZ9pyYX9xre6FO3JtAn140w"
+val googleMapsAPIKey = "AIzaSyDWEmbtdzxEFWOuH-qR3n244ggQ7lQNX6Q"
 
 jacoco {
     version = "0.8.7"
@@ -226,6 +227,11 @@ dependencies {
 
     implementation("org.threeten:threetenbp:1.5.1")
     implementation("com.github.joschi.jackson:jackson-datatype-threetenbp:$jacksonVersion")
+
+    // Firebase libraries
+    implementation(platform("com.google.firebase:firebase-bom:28.3.0"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    //implementation("com.google.firebase:firebase-crashlytics-ktx")
 
     // Widget libraries
     implementation("com.rengwuxian.materialedittext:library:2.1.4")
