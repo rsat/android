@@ -13,7 +13,7 @@ val versionMajor = 2
 val versionMinor = 4
 val versionPatch = 0
 
-val googleMapsAPIKey = "AIzaSyDWEmbtdzxEFWOuH-qR3n244ggQ7lQNX6Q"
+val googleMapsAPIKey = "AIzaSyCuDAfkkEpLWqICKLXD_hVTi3pq1UWXkjM"
 
 jacoco {
     version = "0.8.7"
